@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import Aerial from '../assets/Aerial Fiber.svg';
-import EV from '../assets/EV Engineering.svg';
-import Fiber from '../assets/Fiber Optic.svg';
-import Maintenance from '../assets/maintenance services.svg';
-import Project from '../assets/project design.svg';
-import site from '../assets/site build.svg';
-import trenching from '../assets/trenching.svg';
+import Aerial from '../assets/svg/Aerial Fiber.svg';
+import EV from '../assets/svg/EV Engineering.svg';
+import Fiber from '../assets/svg/Fiber Optic.svg';
+import Maintenance from '../assets/svg/maintenance services.svg';
+import Project from '../assets/svg/project design.svg';
+import site from '../assets/svg/site build.svg';
+import trenching from '../assets/svg/trenching.svg';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
@@ -30,7 +30,7 @@ const ServicesCards = () => {
     return (
         <div id="services" className="bg-gray-100">
             <div className='text-center text-2xl md:text-5xl mb-8 text-white font-bold bg-accentRed-dark py-6'>
-                <h2 className="mx-4 md:mx-auto">Check Out Our Comprehensive List of Services & Solutions</h2>
+                <h2 className="mx-4 md:mx-auto font-poppins">Check Out Our Comprehensive List of Services & Solutions</h2>
             </div>
             <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-[1400px] mx-4 md:mx-auto">
                 {services.map((service, index) => {
@@ -49,7 +49,7 @@ const ServicesCards = () => {
                             <img src={service.image} alt={service.text} className="w-24 h-24 md:w-40 md:h-40 object-cover object-center mx-auto my-3" />
 
                             <div className='p-4 flex-grow'>
-                                <h3 className="text-xl md:text-2xl font-semibold mb-2 text-black ">{service.text}</h3>
+                                <h3 className="font-poppins text-xl md:text-2xl font-semibold mb-2 text-black ">{service.text}</h3>
                                 <p className='text-gray-700 text-xs md:text-sm py-4 text-justify'>{service.description}</p>
                             </div>
                         </motion.div>

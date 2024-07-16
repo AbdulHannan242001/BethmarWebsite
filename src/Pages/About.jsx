@@ -7,6 +7,9 @@ import BG from '../assets/AIBG.jpeg';
 import fiber from '../assets/FiberServices.jpg';
 import civil from '../assets/CivilServices.jpg';
 import AboutAnimate from '../components/AboutAnimate';
+import Cusotmers from '../components/Cusotmers';
+import { FaAngleRight } from "react-icons/fa";
+
 
 const About = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -68,12 +71,12 @@ const About = () => {
         <div className='bg-gray-100'>
             <AboutAnimate />
             <div className='text-center text-2xl md:text-5xl text-white font-bold bg-accentRed-dark py-6'>
-                <h2 className="mx-4 md:mx-auto">Solutions We Provide</h2>
+                <h2 className="mx-4 font-poppins md:mx-auto">Solutions We Provide</h2>
             </div>
             <div className='bg-gray-100 py-4' style={divStyle}>
                 <div className='mx-auto px-4 sm:px-6 lg:px-8'>
-                    <div className='relative flex justify-center items-center overflow-hidden h-[60vh] md:h-[80vh] lg:[70vh]'>
-                        <div className='relative w-full h-full' style={{ perspective: '1200px', }}>
+                    <div className='relative flex justify-center items-center overflow-hidden h-[80vh] md:h-[80vh] lg:[90vh]'>
+                        <div className='relative top-5 w-full h-[90%]' style={{ perspective: '1200px', }}>
                             {services.map((service, index) => {
                                 const angle = (360 / services.length) * (index - currentIndex);
                                 const zIndex = services.length - Math.abs(index - currentIndex);
@@ -84,13 +87,13 @@ const About = () => {
                                 return (
                                     <motion.div
                                         key={index}
-                                        className={`absolute w-[200px] md:w-[300px] h-[85%] mt-auto bg-white rounded-lg transition-transform duration-1000 ease-in-out ${shadow} ${gradient}`}
+                                        className={`absolute w-[250px] md:w-[300px] h-[90%] bg-white rounded-lg transition-transform duration-1000 ease-in-out ${shadow} ${gradient}`}
                                         style={{
-                                            transform: `rotateY(${angle}deg) translateZ(300px)`,
+                                            transform: `rotateY(${angle}deg) translateZ(600px)`,
                                             zIndex: zIndex,
                                             left: '50%',
-                                            transformOrigin: 'center center -300px',
-                                            transform: `translateX(-50%) rotateY(${angle}deg) translateZ(300px)`,
+                                            transformOrigin: 'center center -500px',
+                                            transform: `translateX(-50%) rotateY(${angle}deg) translateZ(200px)`,
                                             filter: isFront ? 'none' : 'brightness(0.5)',
                                         }}
                                     >
@@ -98,12 +101,12 @@ const About = () => {
                                             <img src={service.image} className='w-full h-full object-cover content-center' alt={`${service.title} image`} />
                                         </div>
                                         <div className='w-full p-4 md:text-justify flex flex-col'>
-                                            <h2 className='text-sm md:text-base font-bold text-gray-900 mb-4'>{service.title}</h2>
-                                            <p className='text-gray-600 text-xs md:text-xs mb-6'>{service.desc}</p>
+                                            <h2 className='font-poppins text-sm md:text-base font-bold text-gray-900 my-2'>{service.title}</h2>
+                                            <p className='text-gray-600 text-xs mb-4'>{service.desc}</p>
                                             <div className='mt-auto'>
                                                 <Link
                                                     to={service.link}
-                                                    className='inline-block bg-red-600 text-xs md:text-xs text-white px-4 py-2 shadow hover:bg-red-700 transition duration-300'
+                                                    className='inline-block font-montserrat bg-red-600 text-xs md:text-xs text-white px-4 py-2 shadow hover:bg-red-700 transition duration-300'
                                                 >
                                                     Check Out
                                                 </Link>
@@ -119,11 +122,12 @@ const About = () => {
                             onClick={() => rotateCarousel('next')}
                             className='bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition duration-300'
                         >
-                            <i> &#8250; </i>
+                            <FaAngleRight />
                         </button>
                     </div>
                 </div>
             </div>
+            <Cusotmers />
             <CounterSection />
             <ContactUs />
         </div>

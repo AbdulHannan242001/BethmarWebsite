@@ -64,8 +64,8 @@ const CounterSection = () => {
             transition={{ duration: 0.8, ease: "easeInOut" }}
         >
             <div className="w-full mx-auto bg-white p-8 shadow-lg">
-                <h2 className="text-center text-3xl md:text-5xl font-bold mb-8">Our Achievements</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <h2 className="font-poppins text-center text-3xl md:text-5xl font-bold mb-8">Our Achievements</h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 font-poppins">
                     {counters.map((counter, index) => (
                         <Counter key={index} end={counter.end} label={counter.label} />
                     ))}

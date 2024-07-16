@@ -48,10 +48,10 @@ const Details = () => {
                     transition={{ duration: 0.7 }}
                     variants={aboutVariants}
                 >
-                    <h2 className="text-3xl md:text-5xl font-bold md:px-6 text-center md:text-left">Why Choose Us?</h2>
+                    <h2 className="font-poppins text-3xl md:text-5xl font-bold md:px-6 text-center md:text-left">Why Choose Us?</h2>
                     <div className='w-100 h-1 bg-accentRed-dark my-4 md:mx-6 mx-auto'></div>
                     <p className="text-gray-700 md:px-6 mx-4 md:mx-0 my-2 md:my-12 text-xs md:text-sm text-justify">Choosing <span className='font-semibold text-black'>BETHMAR LIMITED</span> means partnering with a company that prioritizes quality, reliability, and innovation. <br /> Partner with us for your civil engineering and fibre infrastructure needs, and experience the difference that quality, expertise, and dedication can make. <br />  </p>
-                    <Link to="/contact" className="my-4 flex w-6/12 md:w-4/12 px-4 md:px-8 py-2 md:py-3 mx-auto md:mx-6 justify-center items-center bg-accentRed-dark border-2 border-accentRed-dark text-white text-xs md:text-sm font-semibold shadow-md hover:bg-accentRed hover:border-accentRed transition-transform transform hover:scale-105">Contact Now <span className='ml-2 self-center'><FaPhone /></span> </Link>
+                    <Link to="/contact" className="font-montserrat my-4 flex w-6/12 md:w-4/12 px-4 md:px-8 py-2 md:py-3 mx-auto md:mx-6 justify-center items-center bg-accentRed-dark border-2 border-accentRed-dark text-white text-xs md:text-sm font-semibold shadow-md hover:bg-accentRed hover:border-accentRed transition-transform transform hover:scale-105">Contact Now <span className='ml-2 self-center'><FaPhone /></span> </Link>
                 </motion.div>
                 <div className=" md:w-1/2 ">
                     <img src={WhyUs} alt="About Us" className="w-full h-auto rounded md:rounded-lg px-4 md:px-0" />
@@ -61,19 +61,19 @@ const Details = () => {
                 <div className='flex py-4 md:p-6 rounded-md space-x-4'>
                     <h1
                         onClick={() => handleChange(0)}
-                        className={`text-base md:text-2xl border-black border-b-2 md:font-semibold p-2 md:px-2 md:py-4 cursor-pointer ${selected === 0 ? 'bg-accentRed-dark text-white border-b-4 border-t-0 border-l-0 border-r-0  border-slate-300' : 'hover:bg-accentRed-dark hover:text-white hover:border-t-0 hover:border-l-0 hover:border-r-0 transition duration-300'}`}
+                        className={`font-montserrat font-semibold md:text-2xl border-black border-b-2 md:font-semibold p-2 md:px-2 md:py-4 cursor-pointer ${selected === 0 ? 'bg-accentRed-dark text-white border-b-4 border-t-0 border-l-0 border-r-0  border-slate-300' : 'hover:bg-accentRed-dark hover:text-white hover:border-t-0 hover:border-l-0 hover:border-r-0 transition duration-300'}`}
                     >
                         Professional Services
                     </h1>
                     <h1
                         onClick={() => handleChange(1)}
-                        className={`text-base md:text-2xl border-black border-b-2 md:font-semibold p-2 md:px-2 md:py-4 cursor-pointer ${selected === 1 ? 'bg-accentRed-dark text-white border-b-4 border-t-0 border-l-0 border-r-0  border-slate-300' : 'hover:bg-accentRed-dark hover:text-white hover:border-t-0 hover:border-l-0 hover:border-r-0 transition duration-300'}`}
+                        className={`font-montserrat font-semibold md:text-2xl border-black border-b-2 md:font-semibold p-2 md:px-2 md:py-4 cursor-pointer ${selected === 1 ? 'bg-accentRed-dark text-white border-b-4 border-t-0 border-l-0 border-r-0  border-slate-300' : 'hover:bg-accentRed-dark hover:text-white hover:border-t-0 hover:border-l-0 hover:border-r-0 transition duration-300'}`}
                     >
                         Reliable Solutions
                     </h1>
                     <h1
                         onClick={() => handleChange(2)}
-                        className={`text-base md:text-2xl border-black border-b-2 md:font-semibold p-2 md:px-2 md:py-4 cursor-pointer ${selected === 2 ? 'bg-accentRed-dark text-white border-b-4 border-t-0 border-l-0 border-r-0  border-slate-300' : 'hover:bg-accentRed-dark hover:text-white hover:border-t-0 hover:border-l-0 hover:border-r-0 transition duration-300'}`}
+                        className={`font-montserrat font-semibold md:text-2xl border-black border-b-2 md:font-semibold p-2 md:px-2 md:py-4 cursor-pointer ${selected === 2 ? 'bg-accentRed-dark text-white border-b-4 border-t-0 border-l-0 border-r-0  border-slate-300' : 'hover:bg-accentRed-dark hover:text-white hover:border-t-0 hover:border-l-0 hover:border-r-0 transition duration-300'}`}
                     >
                         Support Team
                     </h1>
@@ -85,8 +85,8 @@ const Details = () => {
                                 <img src={descriptions[selected].img} alt="" className='w-auto h-auto' />
                             </div>
                             <div className='md:w-6/12'>
-                                <h2 className='text-lg md:text-3xl font-bold md:px-6 py-2 md:py-4'>{descriptions[selected].title}</h2>
-                                <p className="text-gray-700 md:px-6 my-2 md:my-4 text-xs md:text-sm text-justify">
+                                <h2 className='text-lg md:text-3xl font-bold md:px-6 pt-4 md:pt-6'>{descriptions[selected].title}</h2>
+                                <p className="text-gray-700 md:px-6 text-xs pt-1 md:pt-2 md:text-sm text-justify">
                                     {descriptions[selected].des}
                                 </p>
                             </div>
