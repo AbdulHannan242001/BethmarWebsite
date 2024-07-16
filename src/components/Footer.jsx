@@ -32,8 +32,8 @@ const Footer = () => {
                         <h4 className="mb-4 md:text-2xl font-serif text-lg font-bold text-accentRed-dark">Quick Links</h4>
                         <ol className='md:text-base text-base px-1'>
                             <li className='py-1 md:py-2 hover:decoration-accentRed-dark hover:underline hover:decoration-2 transition duration-300'><Link to='/services'>Services</Link></li>
-                            <li className='py-1 md:py-2 hover:decoration-accentRed-dark hover:underline hover:decoration-2 transition duration-300'><Link to='/civil'>Civil Solutions</Link></li>
-                            <li className='py-1 md:py-2 hover:decoration-accentRed-dark hover:underline hover:decoration-2 transition duration-300'><Link to='/fiber'>Fibre Solutions</Link></li>
+                            <li className='py-1 md:py-2 hover:decoration-accentRed-dark hover:underline hover:decoration-2 transition duration-300'><Link to='/about'>About Us</Link></li>
+                            <li className='py-1 md:py-2 hover:decoration-accentRed-dark hover:underline hover:decoration-2 transition duration-300'><Link to='/contact'>Contact Us</Link></li>
                         </ol>
                     </div>
                     <div className="self-center px-4">
