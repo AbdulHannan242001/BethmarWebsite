@@ -84,7 +84,7 @@ const Banner = () => {
                                     <>
                                         <motion.h2
                                             key={`h2-${slide.id}`}
-                                            className="font-poppins mx-auto text-white text-xl md:text-5xl p-1 md:p-4 font-bold mt-4 bg-gray-900 bg-opacity-40"
+                                            className="font-poppins mx-auto text-white text-xl md:text-5xl p-1 md:p-4 font-bold mt-4 bg-gray-900 bg-opacity-30 backdrop-blur-sm shadow-lg"
                                             initial="initial"
                                             animate="animate"
                                             exit="exit"

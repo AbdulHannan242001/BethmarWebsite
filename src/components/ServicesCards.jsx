@@ -8,6 +8,7 @@ import site from '../assets/svg/site build.svg';
 import trenching from '../assets/svg/trenching.svg';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import BG from '../assets/svg/BackgroundDesign.svg';
 
 
 const services = [
@@ -27,8 +28,18 @@ const ServicesCards = () => {
         visible: { opacity: 1, y: 0 },
     };
 
+    const divStyle = {
+        backgroundImage: `url(${BG})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        height: '100%',
+        width: '100%',
+        padding: '1rem',
+    }
+
     return (
-        <div id="services" className="bg-gray-100">
+        <div id="services" style={divStyle} className="bg-gray-100 ">
             <div className='text-center text-2xl md:text-5xl mb-8 text-white font-bold bg-accentRed-dark py-6'>
                 <h2 className="mx-4 md:mx-auto font-poppins">Check Out Our Comprehensive List of Services & Solutions</h2>
             </div>

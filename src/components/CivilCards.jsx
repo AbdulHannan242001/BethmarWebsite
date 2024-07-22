@@ -6,6 +6,7 @@ import cableInstallation from '../assets/CableInstallation.jpg';
 import faultsMaintainance from '../assets/FaultsMaintainance.jpg';
 import directionalDrilling from '../assets/DirectionalDrilling.jpg';
 import blockageRepair from '../assets/BlockageRepair.jpg';
+
 const services = [
     {
         Heading: 'PLANNING / DESIGN & CONSULTANCY',
