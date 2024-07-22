@@ -1,25 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
-import { AiOutlineMenu, AiOutlineClose, AiOutlineDown, AiOutlineUp } from 'react-icons/ai';
+import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import logo from '../assets/bethmar.png';
 
 const Navbar = () => {
     const [isNavOpen, setIsNavOpen] = useState(false);
-    const [isServicesOpen, setIsServicesOpen] = useState(false);
     const location = useLocation();
 
     const toggleNavMenu = () => {
         setIsNavOpen(!isNavOpen);
     };
 
-    const toggleServicesMenu = () => {
-        setIsServicesOpen(!isServicesOpen);
-    };
-
     const closeDropdown = () => {
         setIsNavOpen(false);
-        setIsServicesOpen(false);
     };
 
     useEffect(() => {
@@ -60,7 +54,7 @@ const Navbar = () => {
                     <div className="-mr-2 flex md:hidden">
                         <button
                             onClick={toggleNavMenu}
-                            className="inline-flex items-center justify-center p-2 rounded-md text-white focus:outline-none "
+                            className="inline-flex items-center justify-center p-2 rounded-md text-white focus:outline-none"
                             aria-expanded={isNavOpen}
                             aria-label="Toggle menu"
                         >
@@ -76,9 +70,11 @@ const Navbar = () => {
                 variants={navVariants}
                 className="md:hidden"
             >
-                <div className="px-5 pt-2 pb-3 space-y-1 sm:px-3">
-                    {renderNavLinks(location.pathname)}
-                </div>
+                {isNavOpen && (
+                    <div className="px-5 pt-2 pb-3 space-y-1 sm:px-3">
+                        {renderNavLinks(location.pathname)}
+                    </div>
+                )}
             </motion.div>
         </nav>
     );
@@ -92,7 +88,6 @@ const Navbar = () => {
         ];
 
         return links.map((link, index) => {
-            const isDropdown = link.dropdown;
             const isSelected = currentPath === link.to;
 
             return (

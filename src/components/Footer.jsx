@@ -39,9 +39,9 @@ const Footer = () => {
                     <div className="self-center px-4">
                         <h4 className="mb-4 md:text-2xl font-serif text-lg font-bold text-accentRed-dark ">Our Projects</h4>
                         <ol className='md:text-base text-base px-1'>
-                            <li className='py-1 md:py-2 hover:decoration-accentRed-dark hover:underline hover:decoration-2 transition duration-300'><a href="#project">London Urban Fibre Optic Expansion</a></li>
-                            <li className='py-1 md:py-2 hover:decoration-accentRed-dark hover:underline hover:decoration-2 transition duration-300'><a href="#project">Rural Broadband Initiative</a></li>
-                            <li className='py-1 md:py-2 hover:decoration-accentRed-dark hover:underline hover:decoration-2 transition duration-300'><a href="#project">Smart City Infrastructure Development</a></li>
+                            <li className='py-1 md:py-2 hover:decoration-accentRed-dark hover:underline hover:decoration-2 transition duration-300'><Link to="/#project">London Urban Fibre Optic Expansion</Link></li>
+                            <li className='py-1 md:py-2 hover:decoration-accentRed-dark hover:underline hover:decoration-2 transition duration-300'><Link to="/#project">Rural Broadband Initiative</Link></li>
+                            <li className='py-1 md:py-2 hover:decoration-accentRed-dark hover:underline hover:decoration-2 transition duration-300'><Link to="/#project">Smart City Infrastructure Development</Link></li>
                         </ol>
                     </div>
                 </div>
@@ -50,7 +50,7 @@ const Footer = () => {
                 <div className="flex justify-between items-center">
                     <div className='self-center'>
                         <a href="#terms" className="mr-4">Terms & Conditions</a>
-                        <span>© 2024 Company Name. All rights reserved.</span>
+                        <span>© 2024 Bethmar Ltd. All rights reserved.</span>
                     </div>
                 </div>
             </div>

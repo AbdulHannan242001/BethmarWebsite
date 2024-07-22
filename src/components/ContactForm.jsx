@@ -19,9 +19,9 @@ const ContactForm = () => {
                 >
                     <h2 className="text-left font-semibold text-3xl md:text-5xl mb-1 font-poppins">Contact Us</h2>
                     <div className='w-5/12 h-1 bg-accentRed-dark mb-2'></div>
-                    <p className='md:px-4 px-0 md:py-2 text-xs md:text-base w-10/12 font-semibold'>Location: Suite 2,Wentworth Lodge, Great North Road, Welwyn Garden City, AL8 7SR</p>
-                    <p className='md:px-4 px-0 md:py-2 text-xs md:text-base w-10/12 font-semibold'>Contact: 01707322748</p>
-                    <p className='md:px-4 px-0 md:py-2 text-xs md:text-base w-10/12 font-semibold'>Email: info@bethmar.co.uk</p>
+                    <p className='md:px-4 px-0 py-1 md:py-2 font-montserrat text-lg md:text-2xl w-10/12 font-normal'><span className='font-semibold'></span> Suite 2,Wentworth Lodge, Great North Road, Welwyn Garden City, AL8 7SR</p>
+                    <p className='md:px-4 px-0 py-1 md:py-2 font-montserrat text-lg md:text-2xl w-10/12 font-normal'><span className='font-semibold'></span> 01707322748</p>
+                    <p className='md:px-4 px-0 py-1 md:py-2 font-montserrat text-lg md:text-2xl w-10/12 font-normal'><span className='font-semibold'></span> info@bethmar.co.uk</p>
                 </motion.div>
                 <motion.div
                     className="md:w-1/2"

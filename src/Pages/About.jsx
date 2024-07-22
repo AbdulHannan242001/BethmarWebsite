@@ -6,9 +6,11 @@ import ContactUs from '../components/ContactUs';
 import BG from '../assets/AIBG.jpeg';
 import fiber from '../assets/FiberServices.jpg';
 import civil from '../assets/CivilServices.jpg';
+import tms from '../assets/TrafficManagementServices.jpg';
 import AboutAnimate from '../components/AboutAnimate';
-import Cusotmers from '../components/Cusotmers';
+import Cusotmers from '../components/Customers';
 import { FaAngleRight } from "react-icons/fa";
+import Customers from '../components/Customers';
 
 
 const About = () => {
@@ -19,31 +21,31 @@ const About = () => {
             image: fiber,
             title: "Fiber Services",
             desc: "Our Specialist Fibre Services division enables us to offer our partner clients a resource of highly experienced fibre and hybrid cable engineers who are, collectively, able to reach anywhere in the United Kingdom within a two hour time frame.",
-            link: "/Fiber"
+            link: "/services"
         },
         {
             image: civil,
             title: "Civil Services",
             desc: "Working nationwide as a main contractor, Bethmar delivers Excellence into every project we work on or assist with.",
-            link: "/Civil"
+            link: "/services"
         },
         {
-            image: civil,
+            image: tms,
             title: "Traffic Management Services",
             desc: "Working nationwide as a main contractor, Bethmar delivers Excellence into every project we work on or assist with.",
-            link: "/traffic-management"
+            link: "/services"
         },
         {
             image: civil,
             title: "Reinstatement Services",
             desc: "Working nationwide as a main contractor, Bethmar delivers Excellence into every project we work on or assist with.",
-            link: "/reinstatement"
+            link: "/services"
         },
         {
             image: civil,
             title: "Design Validation Services",
             desc: "Working nationwide as a main contractor, Bethmar delivers Excellence into every project we work on or assist with.",
-            link: "/design-validation"
+            link: "/services"
         },
     ];
 
@@ -127,7 +129,7 @@ const About = () => {
                     </div>
                 </div>
             </div>
-            <Cusotmers />
+            <Customers />
             <CounterSection />
             <ContactUs />
         </div>

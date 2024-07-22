@@ -1,22 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-
-const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
-
-const generateCircles = (count) => {
-    const circles = [];
-    for (let i = 0; i < count; i++) {
-        const size = getRandomInt(50, 200);
-        const top = getRandomInt(0, 100);
-        const left = getRandomInt(0, 100);
-        const color = i % 2 === 0 ? 'bg-gradient-to-r from-accentRed-light to-accentRed-dark' : 'bg-gradient-to-r from-accentGreen-light to-accentGreen-dark';
-        circles.push({ size, top, left, color });
-    }
-    return circles;
-};
-
-const circles = generateCircles(10);
+import fiber from '../assets/FiberServices.jpg';
+import civil from '../assets/CivilServices.jpg';
+import water from '../assets/Water.jpg';
+import tms from '../assets/TrafficManagementServices.jpg';
+import CounterSection from '../components/Counter';
+import ContactUs from '../components/ContactUs';
+import Customers from '../components/Customers';
 
 const moveRight = {
     initial: { x: '80%' },
@@ -37,26 +28,10 @@ const Services = () => {
 
     return (
         <div className='container mx-auto py-12 bg-gray-100 relative overflow-hidden'>
-            {circles.map((circle, index) => (
-                <motion.div
-                    key={index}
-                    className={`absolute rounded-full backdrop-filter backdrop-blur-2xl ${circle.color}`}
-                    style={{
-                        width: circle.size,
-                        height: circle.size,
-                        top: `${circle.top}%`,
-                        left: `${circle.left}%`,
-                        opacity: 0.5,
-                    }}
-                    initial={{ opacity: 0, scale: 0 }}
-                    animate={{ opacity: 0.5, scale: 1 }}
-                    transition={{ duration: 2, delay: index * 0.3 }}
-                />
-            ))}
             <div className='text-center mt-12 bg-accentRed-dark relative z-10'>
                 <h1 className='font-poppins max-w-[1400px] text-center mx-auto text-white p-4 text-4xl md:text-6xl font-bold'>Our comprehensive list of services and solutions</h1>
             </div>
-            <div className='max-w-[1400px] mx-auto space-y-16 shadow-2xl bg-white p-4 rounded mt-6 relative z-10'>
+            <div className='max-w-[1400px] mx-auto space-y-16 shadow-lg bg-white p-4 rounded mt-6 relative z-10'>
                 <motion.div
                     ref={ref1}
                     initial="initial"
@@ -65,8 +40,8 @@ const Services = () => {
                     transition={{ duration: 0.75, ease: 'easeInOut' }}
                     className='md:w-8/12 shadow-xl rounded-lg p-4 flex h-[35vh] relative z-10 inset-0 bg-gray-100 backdrop-filter backdrop-blur-sm'
                 >
-                    <div className='w-6/12 md:w-4/12 border mr-4'>
-                        <img src="" alt="" />
+                    <div className='w-6/12 md:w-4/12 border mr-4 overflow-hidden'>
+                        <img src={fiber} className='w-full h-full object-cover' alt="" />
                     </div>
                     <div className='w-6/12 md:w-8/12'>
                         <h2 className='font-poppins text-2xl md:text-4xl font-semibold'>Telecom</h2>
@@ -88,7 +63,7 @@ const Services = () => {
                     className='md:w-8/12 shadow-xl rounded-lg p-4 flex h-[35vh] ml-auto relative z-10 inset-0 bg-gray-100 backdrop-filter backdrop-blur-sm'
                 >
                     <div className='w-6/12 md:w-4/12 border mr-4'>
-                        <img src="" alt="" />
+                        <img src={civil} className='w-full h-full object-cover' alt="" />
                     </div>
                     <div className='w-6/12 md:w-8/12'>
                         <h2 className='font-poppins text-2xl md:text-4xl font-semibold'>Civil</h2>
@@ -110,7 +85,7 @@ const Services = () => {
                     className='md:w-8/12 shadow-xl rounded-lg p-4 flex h-[35vh] relative z-10 inset-0 bg-gray-100 backdrop-filter backdrop-blur-sm'
                 >
                     <div className='w-6/12 md:w-4/12 border mr-4'>
-                        <img src="" alt="" />
+                        <img src={tms} className='w-full h-full object-cover' alt="" />
                     </div>
                     <div className='w-6/12 md:w-8/12'>
                         <h2 className='font-poppins font-semibold text-2xl md:text-4xl'>Traffic Management</h2>
@@ -132,7 +107,7 @@ const Services = () => {
                     className='md:w-8/12 shadow-xl rounded-lg p-4 flex h-[35vh] ml-auto relative z-10 inset-0 bg-gray-100 backdrop-filter backdrop-blur-sm'
                 >
                     <div className='w-6/12 md:w-4/12 border mr-4'>
-                        <img src="" alt="" />
+                        <img src={water} className='w-full h-full object-fit' alt="" />
                     </div>
                     <div className='w-6/12 md:w-8/12'>
                         <h2 className='font-poppins font-semibold text-2xl md:text-4xl'>Water</h2>
@@ -162,6 +137,11 @@ const Services = () => {
                         </ul>
                     </div>
                 </motion.div>
+            </div>
+            <div className='w-full z-100 '>
+                <Customers />
+                <CounterSection />
+                <ContactUs />
             </div>
         </div>
     );
