@@ -20,18 +20,18 @@ const moveLeft = {
 };
 
 const Services = () => {
-    const [ref1, inView1] = useInView({ threshold: 0.1, triggerOnce: false });
-    const [ref2, inView2] = useInView({ threshold: 0.1, triggerOnce: false });
-    const [ref3, inView3] = useInView({ threshold: 0.1, triggerOnce: false });
-    const [ref4, inView4] = useInView({ threshold: 0.1, triggerOnce: false });
-    const [ref5, inView5] = useInView({ threshold: 0.1, triggerOnce: false });
+    const [ref1, inView1] = useInView({ threshold: 0.1, triggerOnce: true });
+    const [ref2, inView2] = useInView({ threshold: 0.1, triggerOnce: true });
+    const [ref3, inView3] = useInView({ threshold: 0.1, triggerOnce: true });
+    const [ref4, inView4] = useInView({ threshold: 0.1, triggerOnce: true });
+    const [ref5, inView5] = useInView({ threshold: 0.1, triggerOnce: true });
 
     return (
-        <div className='container mx-auto py-12 bg-gray-100 relative overflow-hidden'>
-            <div className='text-center mt-12 bg-accentRed-dark relative z-10'>
-                <h1 className='font-poppins max-w-[1400px] text-center mx-auto text-white p-4 text-4xl md:text-6xl font-bold'>Our comprehensive list of services and solutions</h1>
+        <div className="bg-gray-100 top-[10vh] relative">
+            <div className='text-center text-2xl md:text-5xl mb-8 text-white font-bold bg-accentRed-dark py-6'>
+                <h2 className="mx-4 md:mx-auto font-poppins">Check Out Our Comprehensive List of Services & Solutions</h2>
             </div>
-            <div className='max-w-[1400px] mx-auto space-y-16 shadow-lg bg-white p-4 rounded mt-6 relative z-10'>
+            <div className='grid grid-cols-1 gap-8 max-w-[1400px] mx-4 md:mx-auto z-10 bg-white p-6'>
                 <motion.div
                     ref={ref1}
                     initial="initial"

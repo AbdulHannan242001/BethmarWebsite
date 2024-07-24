@@ -5,6 +5,7 @@ import Details from '../components/Details'
 import CounterSection from '../components/Counter'
 import ContactUs from '../components/ContactUs'
 import ServicesCards from '../components/ServicesCards'
+import Customers from '../components/Customers'
 
 const Home = () => {
     return (
@@ -13,6 +14,7 @@ const Home = () => {
             <About />
             <ServicesCards />
             <Details />
+            <Customers />
             <CounterSection />
             <ContactUs />
         </div>

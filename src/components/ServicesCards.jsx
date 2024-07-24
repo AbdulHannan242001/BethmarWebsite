@@ -43,7 +43,7 @@ const ServicesCards = () => {
             <div className='text-center text-2xl md:text-5xl mb-8 text-white font-bold bg-accentRed-dark py-6'>
                 <h2 className="mx-4 md:mx-auto font-poppins">Check Out Our Comprehensive List of Services & Solutions</h2>
             </div>
-            <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-[1400px] mx-4 md:mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-[1400px] mx-4 md:mx-auto">
                 {services.map((service, index) => {
                     const [ref, inView] = useInView({ triggerOnce: false });
 

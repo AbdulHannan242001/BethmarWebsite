@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from 'swiper/modules';
+import { Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/swiper-bundle.css';
 import 'swiper/css/pagination';
 import connect from '../assets/customer/connectFibre.png';
@@ -24,7 +24,7 @@ const Customers = () => {
             <h2 className='text-3xl md:text-5xl font-semibold mb-8 text-center font-poppins'>Meet Our Clients</h2>
 
             <Swiper
-                modules={[Pagination]}
+                modules={[Pagination, Autoplay]}
                 spaceBetween={30}
                 slidesPerView={1}
                 loop={true}
@@ -32,6 +32,10 @@ const Customers = () => {
                 breakpoints={{
                     640: { slidesPerView: 2 },
                     1024: { slidesPerView: 3 }
+                }}
+                autoplay={{
+                    delay: 2500,
+                    disableOnInteraction: false
                 }}
                 className='swiper-container'
             >
