@@ -20,43 +20,45 @@ const Customers = () => {
     ];
 
     return (
-        <div className='text-justify w-full max-w-[1400px] mx-auto content-center bg-gray-100 p-4 mt-12 rounded-lg'>
-            <h2 className='text-3xl md:text-5xl font-semibold mb-8 text-center font-poppins'>Meet Our Clients</h2>
+        <div className='text-justify w-full mx-auto content-center bg-gray-100 p-4 mt-12 rounded-lg'>
+            <div className='max-w-[1400px] mx-auto'>
+                <h2 className='text-3xl md:text-5xl font-semibold mb-8 text-center font-poppins'>Meet Our Clients</h2>
 
-            <Swiper
-                modules={[Pagination, Autoplay]}
-                spaceBetween={30}
-                slidesPerView={1}
-                loop={true}
-                pagination={{ clickable: true }}
-                breakpoints={{
-                    640: { slidesPerView: 2 },
-                    1024: { slidesPerView: 3 }
-                }}
-                autoplay={{
-                    delay: 2500,
-                    disableOnInteraction: false
-                }}
-                className='swiper-container'
-            >
-                {customers.map((customer, index) => (
-                    <SwiperSlide key={index}>
-                        <motion.div
-                            className='flex flex-col items-center justify-center bg-white p-6 rounded-lg shadow-md cursor-pointer'
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                        >
-                            <motion.img
-                                src={customer.img}
-                                alt={customer.text}
-                                className='w-auto h-20 md:w-auto md:h-24 object-cover object-center mx-auto mb-4'
-                                whileHover={{ rotate: 10 }}
-                            />
-                            <p className='text-center text-lg md:text-md font-medium text-slate-400'>{customer.text}</p>
-                        </motion.div>
-                    </SwiperSlide>
-                ))}
-            </Swiper>
+                <Swiper
+                    modules={[Pagination, Autoplay]}
+                    spaceBetween={30}
+                    slidesPerView={1}
+                    loop={true}
+                    pagination={{ clickable: true }}
+                    breakpoints={{
+                        640: { slidesPerView: 2 },
+                        1024: { slidesPerView: 3 }
+                    }}
+                    autoplay={{
+                        delay: 1500,
+                        disableOnInteraction: true
+                    }}
+                    className='swiper-container'
+                >
+                    {customers.map((customer, index) => (
+                        <SwiperSlide key={index}>
+                            <motion.div
+                                className='flex flex-col items-center justify-center bg-white p-6 rounded-lg shadow-md cursor-pointer'
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
+                            >
+                                <motion.img
+                                    src={customer.img}
+                                    alt={customer.text}
+                                    className='w-auto h-20 md:w-auto md:h-24 object-cover object-center mx-auto mb-4'
+                                    whileHover={{ rotate: 10 }}
+                                />
+                                <p className='text-center text-lg md:text-md font-medium text-slate-400'>{customer.text}</p>
+                            </motion.div>
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
+            </div>
         </div>
     );
 };
